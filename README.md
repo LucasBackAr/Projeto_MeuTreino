@@ -66,8 +66,8 @@ Projeto para a conclusão da Academia .Net Atos
 
 <h2> 🦸 Autor </h2>
 
- <img style="border-radius: 50%;" src="[https://github.com/account](https://avatars.githubusercontent.com/u/113467764?v=4)" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113467764?v=4" width="100px;" alt=""/>
 <br />
- <sub><b>Lucas Back de Araujo</b></sub></a> <a href="[https://blog.rocketseat.com.br/author/thiago/](https://github.com/LucasBackA)](https://github.com/LucasBackAr)" title="Github"></a>
+ <sub><b>Lucas Back de Araujo</b></sub></a> <a href="https://github.com/LucasBackA)](https://github.com/LucasBackAr" title="Github"></a>
  <br />
 
