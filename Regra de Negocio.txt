@@ -1,0 +1,20 @@
+Descrição da proposta:
+
+- Descubra o poder do treino personalizado com o Meu Treino. Aqui, oferecemos um programa de exercícios sob medida para você, visando alcançar seus objetivos de forma eficaz e sustentável. Com base em uma avaliação personalizada, criaremos um plano de treinamento exclusivo, levando em consideração seu nível de condicionamento físico, preferências e metas individuais. Prepare-se para uma jornada transformadora rumo a um estilo de vida ativo e saudável.
+
+Destacar os recursos:
+
+- Avaliação Personalizada: Realize uma avaliação abrangente para entendermos suas necessidades, histórico de exercícios, restrições e objetivos específicos.
+
+- Planos de Treinamento Sob Medida: Receba planos de treinamento personalizados, com exercícios selecionados de acordo com suas preferências, nível de condicionamento físico e disponibilidade de tempo.
+
+- Biblioteca de Exercícios: Acesse nossa extensa biblioteca de exercícios com vídeos explicativos e instruções detalhadas para garantir a execução correta e segura dos movimentos.
+
+- Acompanhamento de Progresso: Acompanhe seu progresso, registre seus treinos e visualize gráficos de evolução para manter-se motivado e no caminho certo para atingir seus objetivos.
+
+- Suporte Especializado: Conte com o suporte de profissionais qualificados que podem responder a suas dúvidas, fornecer orientações e ajustar seu plano de treinamento conforme necessário.
+
+Scaffold-DbContext "Data Source=localhost;Initial Catalog=BANCOdeDADOS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+
+Provider:
+Microsoft.EntityFrameworkCore.SqlServer

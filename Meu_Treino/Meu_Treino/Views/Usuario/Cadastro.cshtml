@@ -1,0 +1,115 @@
+﻿@model Meu_Treino.Models.Dtos.Usuario
+@{
+    ViewData["Title"] = "Cadastro de Usuário";
+    
+}
+
+
+<h1 class="display-3">Comece a montar o seu <strong class="MeuTreino">Meu Treino</strong></h1>
+
+<form asp-controller="Usuario" asp-action="Cadastrar" method="post">
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+        <br />
+            <div class="text-end"><label  asp-for="DataCadastro">@DateTime.Now</label></div>
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Cadastro</p>
+
+                                <form class="mx-1 mx-md-4">
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="NomeUsuario">Nome</label>
+                                            <input type="text" asp-for="Nome" class="form-control" placeholder="Digite seu Nome" />
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="Login">Nome do Usuario</label>
+                                            <input type="text" asp-for="Login" class="form-control" placeholder="Digite seu nome de usuário"/>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="EmailUsuario">Email</label>
+                                            <input type="email" asp-for="Email" class="form-control" placeholder="Digite seu email" />
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="Senha">Senha</label>
+                                            <input type="password" asp-for="Senha" class="form-control" placeholder="Digite sua Senha" />
+                                            
+                                        </div>                                        
+                                        
+                                    </div>
+
+                                    
+
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                                        <label class="form-check-label" for="form2Example3">
+                                            Eu concordo com os termos de uso <a href="#!">Termos de Uso</a>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+                                    </div>
+                                        <div class="text-lg text-center btn-block">
+                                            <a class="btn btn-primary" asp-controller="Usuario" asp-action="Login" role="button">Login do Usuário</a>
+                                        </div>
+                                </form>
+
+                            </div>
+                            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/03/19/18/idoh-exercise.jpg"
+                                     class="img-fluid" alt="Sample image">
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+            
+        </div>        
+    </div>
+</section>
+</form>
+
+<script>
+    const checkbox = document.querySelector('#form2Example3c');
+    const submitBtn = document.querySelector('#submitBtn');
+
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            submitBtn.disabled = false;
+        } else {
+            submitBtn.disabled = true;
+        }
+    });
+</script>
+
+
+
+
+
+
+
+

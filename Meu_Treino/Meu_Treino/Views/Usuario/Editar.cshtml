@@ -1,0 +1,40 @@
+﻿@model Meu_Treino.Models.Dtos.Usuario
+@{
+    ViewData["Title"] = "Editar Contatos";
+}
+
+<div class="text-center">
+    <h1 class="display-4"> <strong>Editar Contato</strong></h1>
+</div>
+
+<form asp-asp-controller="Usuario" asp-action="Alterar" method="post">
+
+    <input type="hidden" asp-for="Id"/>
+    <div class="d-flex flex-column align-items-center mb-4">
+    <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="NomeUsuario">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite seu Nome" />
+    </div>
+</div>
+
+    <div class="d-flex flex-column align-items-center mb-4">
+    <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="Login">Nome do Usuario</label>
+        <input type="text" asp-for="Login" class="form-control" placeholder="Digite seu nome de usuário" />
+    </div>
+</div>
+
+<div class="d-flex flex-column align-items-center mb-4">
+    <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="EmailUsuario">Email</label>
+        <input type="email" asp-for="Email" class="form-control" placeholder="Digite seu email" />
+        <br />
+    </div>
+</form>
+
+
+
+<div class="text-center">
+    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+    <a class="btn btn-secondary" asp-action="ListaUsuario" asp-asp-controller="Usuario" role="button">Voltar</a>
+</div>

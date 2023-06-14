@@ -1,0 +1,52 @@
+﻿@model List<Meu_Treino.Models.Dtos.Usuario>
+@{
+    ViewData["Title"] = "Lista Usuários";
+    
+}
+
+<div class="text-end">
+    <a class="btn btn-dark" role="button" asp-controller="Usuario" asp-action="Criar">Adicionar Usuário</a>
+</div>
+
+<br />
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Usuario</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Login</th>
+                <th scope="col">Email</th>
+                <th scope="col">DataCadastro</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(Model != null && Model.Any())
+            {
+                foreach(Meu_Treino.Models.Dtos.Usuario usuario in Model)
+                {
+                    <tr>
+                        <th scope="row">@usuario.Id</th>
+                        <td>@usuario.Nome</td>
+                        <td>@usuario.Login</td>
+                        <td>@usuario.Email</td>
+                        <td>@usuario.DataCadastro</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a role="button" asp-controller="Usuario" asp-action="Editar" asp-route-id="@usuario.Id" class="btn btn-secondary">Editar</a>
+                                <a role="button" asp-controller="Usuario" asp-action="ApagarUsuario" class="btn btn-danger">Apagar</a>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+

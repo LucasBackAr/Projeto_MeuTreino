@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Meu_Treino.props" />
+</Project>
