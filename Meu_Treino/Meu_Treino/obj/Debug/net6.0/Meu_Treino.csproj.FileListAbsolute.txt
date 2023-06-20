@@ -87,3 +87,5 @@ D:\Projeto_Final\Meu_Treino\Meu_Treino\obj\Debug\net6.0\refint\Meu_Treino.dll
 D:\Projeto_Final\Meu_Treino\Meu_Treino\obj\Debug\net6.0\Meu_Treino.pdb
 D:\Projeto_Final\Meu_Treino\Meu_Treino\obj\Debug\net6.0\Meu_Treino.genruntimeconfig.cache
 D:\Projeto_Final\Meu_Treino\Meu_Treino\obj\Debug\net6.0\ref\Meu_Treino.dll
+D:\Projeto_Final\Meu_Treino\Meu_Treino\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutDeslogada.cshtml.rz.scp.css
+D:\Projeto_Final\Meu_Treino\Meu_Treino\bin\Debug\net6.0\Newtonsoft.Json.dll

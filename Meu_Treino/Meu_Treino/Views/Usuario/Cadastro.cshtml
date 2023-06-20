@@ -1,13 +1,30 @@
 ﻿@model Meu_Treino.Models.Dtos.Usuario
 @{
+    Layout = "_LayoutDeslogada";
     ViewData["Title"] = "Cadastro de Usuário";
     
 }
+@if(TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-secondary btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if(TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-secondary btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["MensagemErro"]
+    </div>
+}
 
 
-<h1 class="display-3">Comece a montar o seu <strong class="MeuTreino">Meu Treino</strong></h1>
 
-<form asp-controller="Usuario" asp-action="Cadastrar" method="post">
+<h1 class="display-3">Faça seu cadastro no <strong class="MeuTreino">Meu Treino</strong></h1>
+
+
+<form asp-controller="Usuario" asp-action="Cadastro" method="post">
 <section class="vh-100" style="background-color: #eee;">
     <div class="container h-100">
         <br />
@@ -19,7 +36,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Cadastro</p>
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Cadastre-se no <strong class="MeuTreino">Meu Treino</strong></p>
 
                                 <form class="mx-1 mx-md-4">
 
@@ -27,22 +44,22 @@
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="NomeUsuario">Nome</label>
                                             <input type="text" asp-for="Nome" class="form-control" placeholder="Digite seu Nome" />
-                                            
+                                            @Html.ValidationMessageFor(p => p.Nome)
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label" for="Login">Nome do Usuario</label>
+                                            <label class="form-label" for="Login">Nome do Usuário</label>
                                             <input type="text" asp-for="Login" class="form-control" placeholder="Digite seu nome de usuário"/>
-                                           
+                                                @Html.ValidationMessageFor(p => p.Login)
                                         </div>
                                     </div>
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="EmailUsuario">Email</label>
                                             <input type="email" asp-for="Email" class="form-control" placeholder="Digite seu email" />
-                                            
+                                                @Html.ValidationMessageFor(p => p.Email)
                                         </div>
                                     </div>
 
@@ -50,10 +67,22 @@
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="Senha">Senha</label>
                                             <input type="password" asp-for="Senha" class="form-control" placeholder="Digite sua Senha" />
-                                            
+                                                @Html.ValidationMessageFor(p => p.Senha)
                                         </div>                                        
                                         
                                     </div>
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <div class="form-outline flex-fill mb-0">
+                                                <label class="form-label" for="Genero">Gênero</label><br>
+                                                <input type="radio" name="Genero" value="Masculino" onclick="showOutro(false)"> Masculino<br>
+                                                <input type="radio" name="Genero" value="Feminino" onclick="showOutro(false)"> Feminino<br>
+                                                <input type="radio" name="Genero" value="Outro" onclick="showOutro(true)"> Outro<br>
+                                                <div id="outroDiv" style="display:none;">
+                                                    <label for="outro">Especifique:</label><br>
+                                                    <input type="text" id="outro">
+                                                </div>
+                                            </div>
+                                        </div>
 
                                     
 
@@ -68,7 +97,7 @@
                                         <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
                                     </div>
                                         <div class="text-lg text-center btn-block">
-                                            <a class="btn btn-primary" asp-controller="Usuario" asp-action="Login" role="button">Login do Usuário</a>
+                                            <a class="btn btn-primary" asp-controller="Login" asp-action="Index" role="button">Login do Usuário</a>
                                         </div>
                                 </form>
 
@@ -93,17 +122,14 @@
 </section>
 </form>
 
-<script>
-    const checkbox = document.querySelector('#form2Example3c');
-    const submitBtn = document.querySelector('#submitBtn');
-
-    checkbox.addEventListener('change', function () {
-        if (this.checked) {
-            submitBtn.disabled = false;
+<script>    
+    function showOutro(show) {
+        if (show) {
+            document.getElementById("outroDiv").style.display = "block";
         } else {
-            submitBtn.disabled = true;
+            document.getElementById("outroDiv").style.display = "none";
         }
-    });
+    }
 </script>
 
 

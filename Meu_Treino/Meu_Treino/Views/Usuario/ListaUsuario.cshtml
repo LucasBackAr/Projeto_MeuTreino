@@ -1,19 +1,29 @@
-﻿@model List<Meu_Treino.Models.Dtos.Usuario>
+﻿@using Meu_Treino.Enums;
+@model List<Meu_Treino.Models.Dtos.Usuario>
 @{
     ViewData["Title"] = "Lista Usuários";
     
 }
 
-<div class="text-end">
-    <a class="btn btn-dark" role="button" asp-controller="Usuario" asp-action="Criar">Adicionar Usuário</a>
-</div>
-
-<br />
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-secondary btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-secondary btn-sm close-alert" arial-label="Close">x</button>
+        @TempData["MensagemErro"]
+    </div>
+}
 
 <div class="text-center">
     <h1 class="display-4">Lista de Usuario</h1>
 
-    <table class="table">
+    <table class="table" id="tab-usuarios">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
@@ -21,6 +31,7 @@
                 <th scope="col">Login</th>
                 <th scope="col">Email</th>
                 <th scope="col">DataCadastro</th>
+                <th scope="col">Tipo Perfil</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -35,10 +46,11 @@
                         <td>@usuario.Login</td>
                         <td>@usuario.Email</td>
                         <td>@usuario.DataCadastro</td>
+                        <td>@usuario.Perfil</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a role="button" asp-controller="Usuario" asp-action="Editar" asp-route-id="@usuario.Id" class="btn btn-secondary">Editar</a>
-                                <a role="button" asp-controller="Usuario" asp-action="ApagarUsuario" class="btn btn-danger">Apagar</a>
+                                <a role="button" asp-controller="Usuario" asp-action="ApagarConfirma" class="btn btn-danger">Apagar</a>
                             </div>
                         </td>
 

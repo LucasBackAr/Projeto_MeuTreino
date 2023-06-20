@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Mb2zjINoCZLOtCdDc1AnaBtL5wMEvN9r/TMF2zIoLLNFxYAY4VUYr7VXuX2xkVuWm1CyHbmDJIxb9e4xkCTzWQ==",
+  "dgSpecHash": "OJ209uOAgt1MVpsPbeuktiP1HAUGZAYbn5SW12/90J/tEgIl2IAEl7oJ9Vo3kCtbJu5Q0kyRO6hZtrepnfECfg==",
   "success": true,
   "projectFilePath": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\Meu_Treino.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

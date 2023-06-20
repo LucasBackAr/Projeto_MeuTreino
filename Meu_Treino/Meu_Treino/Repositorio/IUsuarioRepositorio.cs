@@ -11,10 +11,11 @@ namespace Meu_Treino.Repositorio
         /// </summary>
     public interface IUsuarioRepositorio
     {
+        Usuario BuscarLogin(string login);
         Usuario Adicionar(Usuario usuario);
         List<Usuario> BuscaTodos(); //Lista todos os usuarios cadastrdos no sistema
         Usuario BuscaId(int id); //Buscas os usuarios pela ID resolver
         Usuario Atualiza(Usuario usuario); //Atualiz os dados do usuario, caso preciso
-        bool Apagar (int id); //resolver
+        bool ApagarUsuario(int Id); //metodo para apagar o usuario
     }
 }

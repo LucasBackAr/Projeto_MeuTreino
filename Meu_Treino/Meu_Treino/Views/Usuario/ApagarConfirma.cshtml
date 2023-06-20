@@ -1,0 +1,16 @@
+﻿@model Meu_Treino.Models.Dtos.Usuario
+@{
+    ViewData["Tittle"] = "Apagar Usuário";
+}
+<div class="text-lg-center">
+    <h3 class="text-danger ">VOCÊ REALMENTE DESEJA APAGAR ESTE USUÁRIO?</h3>
+    <div class="btn-outline-danger border-warning">
+    </div>
+</div>
+<br />
+<div class="text-center">
+    <a class="btn btn-secondary btn-lg btn-outline-light" role="button" asp-controller="Usuario" asp-action="ListaUsuario">Cancelar Exclusão</a>
+    <br />
+    <br />
+    <a class="btn btn-warning btn-lg btn-outline-danger" asp-controller="Usuario" asp-action="ApagarUsuario" asp-route-id="@Model.Id">Confirmar Exclusão</a>
+</div>

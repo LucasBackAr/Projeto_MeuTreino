@@ -13,6 +13,10 @@ namespace Meu_Treino.Repositorio
         {
 
         }
+        public Usuario BuscarLogin(string login)
+        {
+            return _context.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper())!;
+        }
         public UsuarioRepositorio(MeuTreinoContext meuTreinoContext)
         { 
             _context = meuTreinoContext;
@@ -25,21 +29,7 @@ namespace Meu_Treino.Repositorio
             _context.SaveChanges();
             return usuario;
 
-        }       
-        
-
-        public bool Apagar(int id)
-        {
-            Usuario usuarioDB = BuscaId(id);
-
-            if (usuarioDB == null)
-                throw new Exception("Houve um erro em apagar o usuário!");
-
-            _context.Usuarios.Remove(usuarioDB);
-            _context.SaveChanges();
-
-            return true;
-        }
+        } 
 
         public Usuario Atualiza(Usuario usuario)
         {
@@ -50,7 +40,10 @@ namespace Meu_Treino.Repositorio
 
             usuarioDB.Nome = usuario.Nome;
             usuarioDB.Email = usuario.Email;
-            usuario.Login = usuario.Login;
+            usuarioDB.Login = usuario.Login;
+            usuarioDB.Perfil = usuario.Perfil;
+            usuarioDB.DataAtualizacao = DateTime.Now;
+            
 
             _context.Usuarios.Update(usuarioDB);
             _context.SaveChanges();
@@ -62,6 +55,20 @@ namespace Meu_Treino.Repositorio
         {            
             return _context.Usuarios.FirstOrDefault(x => x.Id == id)!;
         }
+        
+        //Apagar o Usuario
+        public bool ApagarUsuario(int id)
+        {
+            Usuario usuarioDB = BuscaId(id);
+
+            if (usuarioDB == null)
+                throw new Exception("Houve um erro em apagar o usuário!");
+
+            _context.Usuarios.Remove(usuarioDB);
+            _context.SaveChanges();
+            return true;
+        }
+
 
         public List<Usuario> BuscaTodos()
         {
