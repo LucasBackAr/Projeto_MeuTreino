@@ -5,7 +5,10 @@ using Newtonsoft.Json;
 namespace Meu_Treino.ViewComponents
 {
     public class Menu : ViewComponent
-    {
+    {   /// <summary>
+        /// Cria um Menu para ser usado nas Views 
+        /// </summary>
+        /// <returns></returns>
         public async Task<IViewComponentResult> InvokeAsync()
         {
             string sessaoUsuario = HttpContext.Session.GetString("sessaoUsuarioLogado");

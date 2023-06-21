@@ -1,4 +1,5 @@
 ﻿using Meu_Treino.Enums;
+using Meu_Treino.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,6 +8,7 @@ using System.Runtime.CompilerServices;
 namespace Meu_Treino.Models.Dtos;
 /// <summary>
 /// Cria os Usuarios que serão cadastrados dentro do site.
+/// Metodos para os usuarios.
 /// </summary>
 public class Usuario
 {
@@ -19,18 +21,20 @@ public class Usuario
     [Required(ErrorMessage = "Campo Obrigatório")]
     public string Login { get; set; } = null!;
 
-    //Vai tipificar os perfis de usuarios
-    
+    //Vai tipificar os perfis de usuarios    
     public PerfilEnum Perfil { get; set; }
     [Required]
     public string Senha { get; set; } = null!;
     //public string ConfSenha { get; set; } = null!;
 
+
+    //Le a Senha do usuario cripto
     public bool SenhaValida(string senha)
     {
-        return Senha == senha;
+        return Senha == senha.Cripritografia();
     }
 
+    //cadastra a hora do usuario no BD
     public DateTime DataCadastro { get; set; }    
 
     public DateTime DataNascimento { get; set; }
@@ -40,10 +44,16 @@ public class Usuario
 
     //Dado não obrigatorio, para deixar isso a cargo do usuario que se identifica
     //ou não com algum genero.
-    public string? Genero { get; set; }
-    
+    public string? Genero { get; set; }    
 
+    //Vincula com o Pergil
     public virtual ICollection<Perfi> Perfis { get; set; } = new List<Perfi>();
-
+    //Vincula com plano de treino
     public virtual ICollection<PlanosTreino> PlanosTreinos { get; set; } = new List<PlanosTreino>();
+
+    // passa a cripto
+    public void SetSenhaHash()
+    {
+        Senha = Senha.Cripritografia();
+    }
 }

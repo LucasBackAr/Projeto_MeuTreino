@@ -6,6 +6,13 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Meu_Treino.Repositorio
 {
+    /// <summary>
+    /// Cria repositorio dos usuarios no Banco de Dados.
+    /// Grava o Usuario
+    /// BuscaID
+    /// Atualiza
+    /// Le senha cripto
+    /// </summary>
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
         private readonly MeuTreinoContext _context;
@@ -22,15 +29,19 @@ namespace Meu_Treino.Repositorio
             _context = meuTreinoContext;
         }
 
+
+        //grava no banco de dados os usuarios
         public Usuario Adicionar(Usuario usuario)
         {
-            //Grava no bando de dados
+            
+            usuario.SetSenhaHash();
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
             return usuario;
 
         } 
 
+        // Atualiza ususarios no BD
         public Usuario Atualiza(Usuario usuario)
         {
             
@@ -51,6 +62,7 @@ namespace Meu_Treino.Repositorio
             return usuarioDB;
         }
 
+        //Busca no Banco
         public Usuario BuscaId(int id)
         {            
             return _context.Usuarios.FirstOrDefault(x => x.Id == id)!;
