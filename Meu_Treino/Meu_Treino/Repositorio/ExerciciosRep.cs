@@ -18,11 +18,12 @@ namespace Meu_Treino.Repositorio
         {
             _context = meuTreinoContext;
         }
-        public Exercicio Add(Exercicio exercicio)
+        public Exercicio Adicionar(Exercicio exercicio)
         {
             _context.Exercicios.Add(exercicio);
             _context.SaveChanges();
             return exercicio;
+            
         }
 
         public Exercicio Atualiza(Exercicio exercicio)

@@ -16,8 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Projeto_Final\Meu_Treino\Meu_Treino
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Exercio/Exercicio.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpb1xFeGVyY2ljaW8uY3NodG1s
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Exercicio/CadastrarExercicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvXENhZGFzdHJhckV4ZXJjaWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Exercicio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Home/Index.cshtml]

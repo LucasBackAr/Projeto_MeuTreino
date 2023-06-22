@@ -13,13 +13,16 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Página Inicial</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Exercio" asp-action="Exercicio">Exercício</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Exercicio" asp-action="Index">Exercício</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Exercicio" asp-action="CadastrarExercicio"> Cadastro de Exercício</a>
             </li>
 
             @if (Model.Perfil == Meu_Treino.Enums.PerfilEnum.Admin)
             {
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="ListaUsuario">Usuarios</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="ListaUsuario">Lista de Usuarios</a>
                 </li>
             }
             

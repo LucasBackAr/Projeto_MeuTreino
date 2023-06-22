@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MeuTreinoContext>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IExerciciosRep, ExerciciosRep>();
 
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

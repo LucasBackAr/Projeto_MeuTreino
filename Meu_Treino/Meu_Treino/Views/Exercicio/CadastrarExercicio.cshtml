@@ -1,0 +1,49 @@
+﻿@model Meu_Treino.Models.Dtos.Exercicio
+@{
+    ViewData["Tittle"] = "Cadastro Exercícios";
+}
+
+<form asp-controller="Exercicio" asp-action="CadastrarExercicio" method="post">
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="nome">Nome</label>
+            <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do exercicio">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="Grupo">Grupo Muscular</label>
+            <select id="inputState" asp-for="GrupoMuscular" class="form-control">
+                <option selected>Selecione...</option>
+                <option>Peito</option>
+                <option>Costas</option>
+                <option>Ombros</option>
+                <option>Braços</option>
+                <option>Pernas</option>
+                <option>Glúteos</option>
+            </select>
+         </div>
+        <div class="form-group col-md-4">
+            <label for="inputState">Nivel</label>
+            <select id="inputState" asp-for="NivelDificuldade" class="form-control">
+                <option selected>Selecione...</option>
+                <option>Iniciante</option>
+                <option>Intermedíario</option>
+                <option>Avançado</option>
+            </select>
+        </div>
+    </div>   
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Instrução</label>
+        <textarea class="form-control" asp-for="Instrucoes" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Descrição</label>
+        <textarea class="form-control" asp-for="Descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Equipamentos</label>
+        <textarea class="form-control" asp-for="Equipamentos" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
