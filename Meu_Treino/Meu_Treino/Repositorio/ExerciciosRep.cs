@@ -9,7 +9,6 @@ namespace Meu_Treino.Repositorio
     /// Grava o Exerc
     /// BuscaID
     /// Atualiza
-    /// Le senha cripto
     /// </summary>
     public class ExerciciosRep : IExerciciosRep
     {
@@ -26,51 +25,6 @@ namespace Meu_Treino.Repositorio
             
         }
 
-        public Exercicio Atualiza(Exercicio exercicio)
-        {
-            Exercicio exercicioDB = BuscaExercioId(exercicio.Id);
-            if (exercicioDB == null)
-                throw new Exception("Houve um erro na Atualização!");
-
-            exercicioDB.Nome = exercicio.Nome;
-            exercicioDB.Descricao = exercicio.Descricao;
-            exercicioDB.NivelDificuldade = exercicio.NivelDificuldade; 
-            exercicioDB.GrupoMuscular = exercicio.GrupoMuscular;
-            exercicioDB.Instrucoes = exercicio.Instrucoes;
-           
-
-
-            _context.Exercicios.Update(exercicioDB);
-            _context.SaveChanges();
-
-            return exercicioDB;
-        }
-
-        public Exercicio BuscaExercioId(int id)
-        {
-            return _context.Exercicios.FirstOrDefault(x => x.Id == id)!;
-        }
-
-        public List<Exercicio> BuscaTodosExercicios()
-        {
-            return _context.Exercicios.ToList();
-        }
-
-        public bool DeleteExercicio(int id)
-        {
-            Exercicio exercicioDB = BuscaExercioId(id);
-
-            if (exercicioDB == null)
-                throw new Exception("Houve um erro em apagar o usuário!");
-
-            _context.Exercicios.Remove(exercicioDB);
-            _context.SaveChanges();
-            return true;
-        }
-
-        public IEnumerable<Exercicio> EncontrarPorNivelDifilcultade(string nivelDificuldade)
-        {
-            return _context.Exercicios.Where( e => e.NivelDificuldade == nivelDificuldade).ToList();
-        }
+       
     }
 }

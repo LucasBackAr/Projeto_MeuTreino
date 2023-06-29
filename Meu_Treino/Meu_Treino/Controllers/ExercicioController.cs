@@ -22,6 +22,7 @@ namespace Meu_Treino.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult CadastrarExercicio(Exercicio exercicio) 
         { 
