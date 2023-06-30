@@ -1,7 +1,11 @@
 ﻿@model List<Meu_Treino.Models.Dtos.Exercicio>
+@using Meu_Treino.Enums;
 @{
     ViewData["Tittle"] = "Exercícios";
+    Meu_Treino.Models.Dtos.Exercicio exercicioId;
+
 }
+
         @if(Model != null && Model.Any())
         {
             foreach(Meu_Treino.Models.Dtos.Exercicio exercicio in Model)
@@ -10,7 +14,7 @@
             <div class="card-header">
                 <h4> <strong> @exercicio.Nome - @exercicio.NivelDificuldade - @exercicio.GrupoMuscular </strong> </h4>
                 <div class="text-end">
-                    <a role="button" class="btn btn-danger" asp-controller="Exercicio" asp-action="ApagarConfirma">Apagar</a>
+                    <button class="btn btn-danger apagar-btn" data-exercicio-id="@exercicio.Id">Apagar</button>
                 </div>
            </div>
             <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Descrição</a>
@@ -37,7 +41,7 @@
                         <div class="card card-body">
                             <h5>Equipamentos</h5>
                             @exercicio.Equipamentos
-                        </div>
+                        </div>                
                     </div>
                 </div>
             </div>
@@ -45,6 +49,37 @@
 
             }
         }
+        
+        <dialog>
+            
+            <div class="text-center">
+            <p>
+                <h2>Deseja realmente apagar este exercicio?</h2>
+            </p>
+        <a class="btn btn-danger" asp-action="Apagar" asp-controller="Exercicio" id="confirmarExclusaoBtn" asp-route-id="" role="button">Confirmar exclusão</a>
+            <button class="btn btn-primary fechar-btn">Cancelar</button>
+            </div>
+        </dialog>
 
 
+       
+<script>
+    const buttonApagar = document.querySelector('.apagar-btn');
+    const modal = document.querySelector('dialog');
+    const buttonClose = document.querySelector('.fechar-btn');
+    const confirmarExclusaoBtn = document.querySelector('#confirmarExclusaoBtn');
+
+    buttonApagar.onclick = function () {
+        modal.showModal();
+        const exercicioId = this.getAttribute('data-exercicio-id');
+        confirmarExclusaoBtn.setAttribute('href', `/Exercicio/Apagar/${exercicioId}`);
+    };
+
+    buttonClose.onclick = function () {
+        modal.close();
+    };
+
+</script>
+
+        
 

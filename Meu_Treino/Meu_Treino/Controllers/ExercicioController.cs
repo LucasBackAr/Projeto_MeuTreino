@@ -13,6 +13,8 @@ namespace Meu_Treino.Controllers
         {
             _exerciciosRep = exercicioRepositorio;
         }
+
+        [PaginaAdm]
         public IActionResult Index()
         {
             List<Exercicio> ListaExercicio =  _exerciciosRep.GetExercicios();
@@ -29,6 +31,20 @@ namespace Meu_Treino.Controllers
         { 
              _exerciciosRep.Adicionar(exercicio);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Apagar(int id)
+        {
+            try
+            {
+                _exerciciosRep.Apagar(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                // Lidar com a exceção ou registrar o erro, conforme necessário
+                return RedirectToAction("Error");
+            }
         }
 
     }

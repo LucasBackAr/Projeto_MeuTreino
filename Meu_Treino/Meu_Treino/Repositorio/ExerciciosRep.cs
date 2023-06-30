@@ -17,6 +17,13 @@ namespace Meu_Treino.Repositorio
         {
             _context = meuTreinoContext;
         }
+
+        public Exercicio ListarId(int id)
+        {
+            return _context.Exercicios.FirstOrDefault(x => x.Id == id);
+
+        }
+
         public Exercicio Adicionar(Exercicio exercicio)
         {
             _context.Exercicios.Add(exercicio);
@@ -25,9 +32,30 @@ namespace Meu_Treino.Repositorio
             
         }
 
+        public bool Apagar(int id)
+        {
+            Exercicio exercicioDB = ListarId(id);
+
+            if (exercicioDB != null)
+            {
+                _context.Exercicios.Remove(exercicioDB);
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new System.Exception("Houve um erro");
+            }
+
+            
+            return true;
+
+        }
+
         public List<Exercicio> GetExercicios()
         {
             return _context.Exercicios.ToList();
         }
+
+        
     }
 }

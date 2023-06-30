@@ -11,8 +11,11 @@ namespace Meu_Treino.Repositorio
         /// </summary>
     public interface IExerciciosRep
     {
-        List<Exercicio> GetExercicios();        
-        Exercicio Adicionar(Exercicio exercicio);//Adiciona exercicios        
-       
+        List<Exercicio> GetExercicios();
+        Exercicio ListarId(int id);
+        Exercicio Adicionar(Exercicio exercicio);//Adiciona exercicios      
+
+        bool Apagar(int id);
+        
     }
 }
