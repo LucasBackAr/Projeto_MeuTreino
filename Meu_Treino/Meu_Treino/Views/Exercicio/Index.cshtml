@@ -1,5 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Meu_Treino.Models.Dtos.Exercicio>
 @{
+    ViewData["Tittle"] = "Exercícios";
 }
+        @if(Model != null && Model.Any())
+        {
+            foreach(Meu_Treino.Models.Dtos.Exercicio exercicio in Model)
+            {
+        <p class="card-body">
+            <div class="card-header">
+                <h4> <strong> @exercicio.Nome - @exercicio.NivelDificuldade - @exercicio.GrupoMuscular </strong> </h4>
+                <div class="text-end">
+                    <a role="button" class="btn btn-danger" asp-controller="Exercicio" asp-action="ApagarConfirma">Apagar</a>
+                </div>
+           </div>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Descrição</a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample2 multiCollapseExample3">Todas Instruções</button>
+            
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        <h4> @exercicio.Nome</h4>
+                        <h5>Descrição</h5>
+                        @exercicio.Descricao
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">                        
+                        <h5>Instruções</h5>
+                        @exercicio.Instrucoes
+                    </div>
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                        <div class="card card-body">
+                            <h5>Equipamentos</h5>
+                            @exercicio.Equipamentos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            }
+        }
+
+
+

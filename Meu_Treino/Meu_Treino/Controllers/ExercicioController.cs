@@ -15,7 +15,8 @@ namespace Meu_Treino.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<Exercicio> ListaExercicio =  _exerciciosRep.GetExercicios();
+            return View(ListaExercicio);
         }
 
         public IActionResult CadastrarExercicio()
@@ -27,7 +28,7 @@ namespace Meu_Treino.Controllers
         public IActionResult CadastrarExercicio(Exercicio exercicio) 
         { 
              _exerciciosRep.Adicionar(exercicio);
-            return View();
+            return RedirectToAction("Index");
         }
 
     }

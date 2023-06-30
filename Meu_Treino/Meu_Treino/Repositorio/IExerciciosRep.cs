@@ -11,7 +11,7 @@ namespace Meu_Treino.Repositorio
         /// </summary>
     public interface IExerciciosRep
     {
-                
+        List<Exercicio> GetExercicios();        
         Exercicio Adicionar(Exercicio exercicio);//Adiciona exercicios        
        
     }

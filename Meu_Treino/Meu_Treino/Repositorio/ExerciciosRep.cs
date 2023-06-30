@@ -25,6 +25,9 @@ namespace Meu_Treino.Repositorio
             
         }
 
-       
+        public List<Exercicio> GetExercicios()
+        {
+            return _context.Exercicios.ToList();
+        }
     }
 }
