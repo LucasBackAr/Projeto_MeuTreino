@@ -1,0 +1,21 @@
+﻿@model Meu_Treino.Models.Dtos.PlanosTreino
+@{
+    ViewData["Tittle"] = "Crie Seu Plano";
+}
+<img src="https://pontapora.ms.gov.br/v2/pmppconsultapublica-esportelazer/" class="img-fluid" alt="Imagem responsiva">
+<form method="post" asp-controller="PlanoTreino" asp-action="Criar">
+    <div class="form-group">
+        <label for="nomePlano">Nome do Plano de Treino</label>
+        <input type="text" asp-for="NomePlano" class="form-control" id="nomePlano" name="NomePlano" placeholder="Plano de Treino" required>
+    </div>
+
+    <p class="text-muted">
+       <h3> Criar um plano de treino estruturado e seguir uma rotina regular de exercícios é fundamental para 
+        alcançar seus objetivos fitness. Um plano bem elaborado permite traçar metas claras, monitorar seu 
+        progresso e garantir a eficiência dos treinos.
+        </h3>
+    </p>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+

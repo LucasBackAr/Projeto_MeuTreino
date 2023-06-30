@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MeuTreinoContext>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<IExerciciosRep, ExerciciosRep>();
+builder.Services.AddScoped<IPlanoTreinoRepositorio, PlanosTreinoRepositorio>();
 
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
