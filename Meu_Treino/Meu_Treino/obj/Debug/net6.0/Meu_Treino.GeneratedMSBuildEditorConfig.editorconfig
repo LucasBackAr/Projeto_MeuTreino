@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Projeto_Final\Meu_Treino\Meu_Treino
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/ExercicioPlano/CriarExercicioPlano.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvUGxhbm9cQ3JpYXJFeGVyY2ljaW9QbGFuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Exercicio/CadastrarExercicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvXENhZGFzdHJhckV4ZXJjaWNpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,8 +40,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9UcmVpbm9cQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/PlanoTreino/Planos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9UcmVpbm9cUGxhbm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Restrito/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdHJpdG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Shared/Components/ListaExercicios/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdGFFeGVyY2ljaW9zXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Shared/Components/Menu/Default.cshtml]

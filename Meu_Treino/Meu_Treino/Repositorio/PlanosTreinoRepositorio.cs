@@ -45,5 +45,26 @@ namespace Meu_Treino.Repositorio
         {
             return _context.PlanosTreinos.FirstOrDefault(x => x.Id == id);
         }
+
+        public List<PlanosTreino> PegarDatas()
+        {
+                DateTime dataAtual = DateTime.Now;
+                DateTime dataEnd = DateTime.Now.AddDays(7);
+                int qtdDias = 0;
+                PlanosTreino datas;
+                List<PlanosTreino> listaDatas = new List<PlanosTreino>();
+
+                while (dataAtual < dataEnd)
+                {
+                    datas = new PlanosTreino();
+                    datas.Datas = dataAtual.ToShortDateString();
+                    datas.Identificadores = "collapse" + dataAtual.ToShortDateString().Replace("/", "");
+                    listaDatas.Add(datas);
+                    qtdDias++;
+                    dataAtual = DateTime.Now.AddDays(qtdDias);
+                }
+                return listaDatas;
+            
+        }
     }
 }

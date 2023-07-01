@@ -15,16 +15,21 @@ namespace Meu_Treino.Controllers
         {
             return View();
         }
+        public IActionResult Planos()
+        {
+            var PegarDatas = _planosRepositorio.PegarDatas();
+            return View(PegarDatas);
+        }
         public IActionResult Criar()
         {
+            
             return View();
         }
         [HttpPost]
         public IActionResult Criar(PlanosTreino plano)
         {
             _planosRepositorio.Adicionar(plano);
-            return View();
+            return RedirectToAction("Planos");
         }
-
     }
 }

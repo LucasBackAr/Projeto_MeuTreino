@@ -1,0 +1,51 @@
+﻿@model Meu_Treino.Models.Dtos.ExerciciosPlano
+
+@{
+    ViewData["Tittle"] = "Cria Plano";
+}
+
+<h4>Cadastre os Exercicios Desejados</h4>
+<hr />
+
+<div class="conteiner">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <text class="card-header">
+                    <div class="text-center">
+                    <strong >Novo Exercício</strong>
+                    </div></text>
+                <div class="card-body">
+                    @using (Html.BeginForm())
+                    {
+                        <div clasas="row">
+                        <div class="form-group form_content">
+                            <label asp-for="SelectedExerciseId" class="control-label">Selecione um Exercício</label>
+                            @Html.DropDownListFor(m => m.SelectedExerciseId, Model.Exercicios)
+                            <span asp-validation-for="SelectedExerciseId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form_content">
+                            <label asp-for="SelectedPlanoId" class="control-label">Selecione um Plano</label>
+                            @Html.DropDownListFor(m => m.SelectedPlanoId, Model.Planos)
+                            <span asp-validation-for="SelectedPlanoId" class="text-danger"></span>
+                        </div>
+                        </div>
+                        <div class="form-group form_content">
+                            <label asp-for="Repeticoes" class="control-label">Repetições</label>
+                            <input asp-for="Repeticoes" class="form-control" />
+                            <span asp-validation-for="Repeticoes" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form_content">
+                            <label asp-for="Series" class="control-label">Séries</label>
+                            <input asp-for="Series" class="form-control" />
+                            <span asp-validation-for="Series" class="text-danger"></span>
+                        </div>
+                        <input class="btn btn-outline-warning text-black form form_content btn-block" type="submit" value="Salvar" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

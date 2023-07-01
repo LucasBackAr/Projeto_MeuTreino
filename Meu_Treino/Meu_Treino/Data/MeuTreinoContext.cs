@@ -61,9 +61,8 @@ public partial class MeuTreinoContext : DbContext
 
         modelBuilder.Entity<ExerciciosPlano>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ExerciciosPlano");
+            entity.HasKey(e => e.Id);
+            entity.ToTable("ExerciciosPlano");
 
             entity.Property(e => e.ExercicioId).HasColumnName("ExercicioID");
             entity.Property(e => e.PlanoId).HasColumnName("PlanoID");
@@ -76,6 +75,7 @@ public partial class MeuTreinoContext : DbContext
                 .HasForeignKey(d => d.PlanoId)
                 .HasConstraintName("FK__Exercicio__Plano__403A8C7D");
         });
+
 
         modelBuilder.Entity<Favorito>(entity =>
         {

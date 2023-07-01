@@ -8,6 +8,8 @@ namespace Meu_Treino.Repositorio
         PlanosTreino Adicionar(PlanosTreino plano);
         PlanosTreino ListarId(int id);
         bool Apagar(int id);
+        List<PlanosTreino> PegarDatas();
+        
 
     }
 }

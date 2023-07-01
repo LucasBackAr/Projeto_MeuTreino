@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Meu_Treino.Models.Dtos.ExerciciosPlano>
+
+@{
+    Layout = null;
+}
+
+<div class="border border-light shadow rounded roundedalign-content-lg-around p-4">
+    @if (Model.Count() > 0)
+    {
+        <ul class="list-group">
+            @foreach (var item in Model)
+            {
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <span class="badge badge-info"> @Html.DisplayFor(modelItem => item.Repeticoes)</span>
+                        </div>
+
+                        <div class="col-6">
+                            @Html.DisplayFor(modelItem => item.Exercicio.Nome)
+                        </div>
+
+                        <div class="col-4">
+                            <a asp-action="AtualizarExercicioPlano" asp-route-exercicioId="@item.ExercicioId" class="btn btn-sm btn-outline-primary rounded-circle">
+                                <i class="fa fa-pencil-square">
+                                </i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary rounded-circle">
+                                <i class="fa fa-times-circle">
+                                </i>
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="alert alert-warning rounded rounded-3">Sem Exercicios Ainda</p>
+    }
+
+</div>
