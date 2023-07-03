@@ -1,5 +1,6 @@
 ﻿using Meu_Treino.Data;
 using Meu_Treino.Models.Dtos;
+using Meu_Treino.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +10,12 @@ namespace Meu_Treino.Controllers
     public class ExercicioPlanoController : Controller
     {
         private readonly MeuTreinoContext _meuTreinoContext;
-        public ExercicioPlanoController(MeuTreinoContext contexto)
+        private readonly IExercicioPlanoRepositorio _repositorio;
+        public ExercicioPlanoController(MeuTreinoContext contexto,
+                                        IExercicioPlanoRepositorio repositorio)
         {
             _meuTreinoContext = contexto;
+            _repositorio = repositorio;
         }
 
         public IActionResult Index()
@@ -64,5 +68,14 @@ namespace Meu_Treino.Controllers
 
             return RedirectToAction("Planos", "PlanoTreino");
         }
+
+        public IActionResult Apagar(int id)
+        {            
+                 _repositorio.Apagar(id);
+                return RedirectToAction("Index");            
+            
+        }
+
+
     }
 }

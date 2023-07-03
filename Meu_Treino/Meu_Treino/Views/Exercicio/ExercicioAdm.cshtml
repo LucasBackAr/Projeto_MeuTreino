@@ -50,7 +50,7 @@
 
     }
 }
-
+<!--modal de exclusão-->
 <dialog>
 
     <div class="text-center">
@@ -65,20 +65,23 @@
 
 
 <script>
-    const buttonApagar = document.querySelector('.apagar-btn');
+    const buttonsApagar = document.querySelectorAll('.apagar-btn');
     const modal = document.querySelector('dialog');
     const buttonClose = document.querySelector('.fechar-btn');
     const confirmarExclusaoBtn = document.querySelector('#confirmarExclusaoBtn');
 
-    buttonApagar.onclick = function () {
-        modal.showModal();
-        const exercicioId = this.getAttribute('data-exercicio-id');
-        confirmarExclusaoBtn.setAttribute('href', `/Exercicio/Apagar/${exercicioId}`);
-    };
+    buttonsApagar.forEach(function (button) {
+        button.onclick = function () {
+            modal.showModal();
+            const usuarioId = this.getAttribute('data-usuario-id');
+            confirmarExclusaoBtn.setAttribute('href', `/Usuario/Apagar/${usuarioId}`);
+        };
+    });
 
     buttonClose.onclick = function () {
         modal.close();
     };
+
 
 </script>
 

@@ -16,18 +16,14 @@ namespace Meu_Treino.Repositorio
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
         private readonly MeuTreinoContext _context;
-        public UsuarioRepositorio() 
+        public UsuarioRepositorio(MeuTreinoContext context) 
         {
-
+            _context = context;
         }
         public Usuario BuscarLogin(string login)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper())!;
-        }
-        public UsuarioRepositorio(MeuTreinoContext meuTreinoContext)
-        { 
-            _context = meuTreinoContext;
-        }
+        }       
 
 
         //grava no banco de dados os usuarios
@@ -67,20 +63,23 @@ namespace Meu_Treino.Repositorio
         {            
             return _context.Usuarios.FirstOrDefault(x => x.Id == id)!;
         }
-        
+
         //Apagar o Usuario
-        public bool ApagarUsuario(int id)
+        public bool Apagar(int id)
         {
             Usuario usuarioDB = BuscaId(id);
 
-            if (usuarioDB == null)
-                throw new Exception("Houve um erro em apagar o usuário!");
-
-            _context.Usuarios.Remove(usuarioDB);
-            _context.SaveChanges();
+            if (usuarioDB != null)
+            {
+                _context.Usuarios.Remove(usuarioDB);
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new System.Exception("Houve um erro");
+            }
             return true;
         }
-
 
         public List<Usuario> BuscaTodos()
         {

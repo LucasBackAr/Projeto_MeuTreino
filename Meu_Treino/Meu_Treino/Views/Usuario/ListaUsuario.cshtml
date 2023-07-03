@@ -50,7 +50,7 @@
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a role="button" asp-controller="Usuario" asp-action="Editar" asp-route-id="@usuario.Id" class="btn btn-secondary">Editar</a>
-                                <a role="button" asp-controller="Usuario" asp-action="ApagarConfirma" class="btn btn-danger">Apagar</a>
+                                <button class="btn btn-danger apagar-btn" data-usuario-id="@usuario.Id">Apagar</button>
                             </div>
                         </td>
 
@@ -60,5 +60,40 @@
         </tbody>
     </table>
 </div>
+
+<!--modal de exclusão-->
+<dialog>
+
+    <div class="text-center">
+        <p>
+            <h2>Deseja realmente apagar este exercicio?</h2>
+        </p>
+        <a class="btn btn-danger" asp-action="Apagar" asp-controller="Exercicio" id="confirmarExclusaoBtn" asp-route-id="" role="button">Confirmar exclusão</a>
+        <button class="btn btn-primary fechar-btn">Cancelar</button>
+    </div>
+</dialog>
+
+
+
+<script>
+    const buttonsApagar = document.querySelectorAll('.apagar-btn');
+    const modal = document.querySelector('dialog');
+    const buttonClose = document.querySelector('.fechar-btn');
+    const confirmarExclusaoBtn = document.querySelector('#confirmarExclusaoBtn');
+
+    buttonsApagar.forEach(function (button) {
+        button.onclick = function () {
+            modal.showModal();
+            const usuarioId = this.getAttribute('data-usuario-id');
+            confirmarExclusaoBtn.setAttribute('href', `/Usuario/Apagar/${usuarioId}`);
+        };
+    });
+
+    buttonClose.onclick = function () {
+        modal.close();
+    };
+
+
+</script>
 
 

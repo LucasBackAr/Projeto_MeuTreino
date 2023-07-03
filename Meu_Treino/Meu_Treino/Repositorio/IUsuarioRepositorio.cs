@@ -16,6 +16,6 @@ namespace Meu_Treino.Repositorio
         List<Usuario> BuscaTodos(); //Lista todos os usuarios cadastrdos no sistema
         Usuario BuscaId(int id); //Buscas os usuarios pela ID resolver
         Usuario Atualiza(Usuario usuario); //Atualiz os dados do usuario, caso preciso
-        bool ApagarUsuario(int Id); //metodo para apagar o usuario
+        bool Apagar(int id); //metodo para apagar o usuario
     }
 }

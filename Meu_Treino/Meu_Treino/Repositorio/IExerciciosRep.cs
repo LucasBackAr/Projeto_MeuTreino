@@ -14,7 +14,6 @@ namespace Meu_Treino.Repositorio
         List<Exercicio> GetExercicios();
         Exercicio ListarId(int id);
         Exercicio Adicionar(Exercicio exercicio);//Adiciona exercicios      
-
         bool Apagar(int id);
         
     }

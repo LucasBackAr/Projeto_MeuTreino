@@ -3,7 +3,8 @@
 namespace Meu_Treino.Repositorio
 {
     public interface IExercicioPlanoRepositorio
-    {
-        List<ExerciciosPlano> GetExercicios();
+    {        
+        bool Apagar(int id);
+        ExerciciosPlano ListarId(int id);
     }
 }

@@ -16,7 +16,7 @@
                     </div>
 
                     <div class="col-2">
-                            <h4>Nome do Exercicio</h4> <a asp-action="Index" asp-controller="Exercicio">
+                            <h4>Nome do Exercicio</h4> <a class="btn btn-sm btn-outline-warning text-black" asp-action="Index" asp-controller="Exercicio">
                         @Html.DisplayFor(modelItem => item.Exercicio.Nome) </a>
                     </div>
 
@@ -30,10 +30,10 @@
                     </div>
 
                     <div class="col-4">
-                        <a class="btn btn-sm btn-outline-danger rounded-circle">
-                            <i class="fa fa-times-circle">
-                            </i>
-                        </a>
+                            <button class=" apagar-btn btn btn-sm btn-outline-danger rounded-circle" data-exercicio-id="@item.Id">
+                                <i class="fa fa-times-circle">
+                                </i>
+                            </button>
                     </div>
 
                 </div>
@@ -48,8 +48,41 @@ else
 
 </div>
 
-
-<div class="col-2">
+<div class="col-2 text-end">
     <a asp-action="CriarExercicioPlano" asp-controller="ExercicioPlano" class="btn btn-sm btn-outline-warning"><strong class="text-black">Novo Exercicio</strong></a>
 </div>
+
+<!--Modal p/ confirmar exclusão-->
+<dialog>
+    <div class="text-center">
+        <p>
+            <h2>Deseja realmente apagar este exercicio?</h2>
+        </p>
+        <a class="btn btn-danger" asp-action="Apagar" asp-controller="ExercicioPlano" id="confirmarExclusaoBtn" asp-route-id="" role="button">Confirmar exclusão</a>
+        <button class="btn btn-primary fechar-btn">Cancelar</button>
+    </div>
+</dialog>
+
+
+    <script>
+    const buttonsApagar = document.querySelectorAll('.apagar-btn');
+    const modal = document.querySelector('dialog');
+    const buttonClose = document.querySelector('.fechar-btn');
+    const confirmarExclusaoBtn = document.querySelector('#confirmarExclusaoBtn');
+
+    buttonsApagar.forEach(buttonApagar => {
+        buttonApagar.onclick = function () {
+            modal.showModal();
+            const exercicioId = this.getAttribute('data-exercicio-id');
+            confirmarExclusaoBtn.setAttribute('href', `/ExercicioPlano/Apagar/${Id}`);
+        };
+    });
+
+    buttonClose.onclick = function () {
+        modal.close();
+    };
+
+
+    </script>
+
 

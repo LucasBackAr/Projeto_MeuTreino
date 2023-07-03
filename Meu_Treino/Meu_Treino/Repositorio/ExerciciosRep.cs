@@ -44,11 +44,8 @@ namespace Meu_Treino.Repositorio
             else
             {
                 throw new System.Exception("Houve um erro");
-            }
-
-            
+            }            
             return true;
-
         }
 
         public List<Exercicio> GetExercicios()

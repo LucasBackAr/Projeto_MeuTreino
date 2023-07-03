@@ -83,31 +83,19 @@ namespace Meu_Treino.Controllers
             _usuarioRepositorio.Atualiza(usuario);
             return RedirectToAction("ListaUsuario");
         }
+
         [PaginaAdm]
-        public IActionResult ApagarConfirma(int Id)
-        {
-            Usuario usuario = _usuarioRepositorio.BuscaId(Id);
-            return View(usuario);
-        }
-        [PaginaAdm]
-        public IActionResult ApagarUsuario(int id)
+        public IActionResult Apagar(int id)
         {
             try
             {
-                bool apagado = _usuarioRepositorio.ApagarUsuario(id);
-                if (apagado)
-                    TempData["MensagemSucesso"] = "Usuário apacado com sucesso!";
-                else
-                    TempData["MensagemErro"] = "Usuário não apagado";
-
-                return RedirectToAction("ListaUsuario", "Usuario");
+                _usuarioRepositorio.Apagar(id);
+                return RedirectToAction("ListaUsuario");
             }
-
             catch (Exception ex)
             {
-
-                TempData["Mensagemerro"] = $"Problemas em apagar o usuário. Erro: {ex.Message}";
-                return RedirectToAction("ListaUsuario", "Usuario");
+                // Lidar com a exceção ou registrar o erro, conforme necessário
+                return RedirectToAction("Error");
             }
         }
 
