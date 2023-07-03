@@ -14,15 +14,9 @@ namespace Meu_Treino.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-        public IActionResult Planos()
-        {
-            var PegarDatas = _planosRepositorio.PegarDatas();
-            return View(PegarDatas);
-        }
+        }        
         public IActionResult Criar()
-        {
-            
+        {            
             return View();
         }
         [HttpPost]

@@ -31,4 +31,5 @@ public partial class ExerciciosPlano
     public int SelectedPlanoId { get; set; }
     [NotMapped]
     public IEnumerable<SelectListItem> Planos { get; set; }
+    
 }

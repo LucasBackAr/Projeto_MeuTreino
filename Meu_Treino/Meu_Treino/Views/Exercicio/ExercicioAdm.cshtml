@@ -6,18 +6,21 @@
 
 }
 
-        @if(Model != null && Model.Any())
-        {
-            foreach(Meu_Treino.Models.Dtos.Exercicio exercicio in Model)
-            {
+@if (Model != null && Model.Any())
+{
+    foreach (Meu_Treino.Models.Dtos.Exercicio exercicio in Model)
+    {
         <p class="card-body">
             <div class="card-header">
-                <h4> <strong> @exercicio.Nome - @exercicio.NivelDificuldade - @exercicio.GrupoMuscular </strong> </h4>                
+                <h4> <strong> @exercicio.Nome - @exercicio.NivelDificuldade - @exercicio.GrupoMuscular </strong> </h4>
+                <div class="text-end">
+                    <button class="btn btn-danger apagar-btn" data-exercicio-id="@exercicio.Id">Apagar</button>
+                </div>
                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Descrição</a>
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample2 multiCollapseExample3">Todas Instruções</button>
 
             </div>
-            
+
         </p>
         <div class="row">
             <div class="col">
@@ -31,7 +34,7 @@
             </div>
             <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample2">
-                    <div class="card card-body">                        
+                    <div class="card card-body">
                         <h5>Instruções</h5>
                         @exercicio.Instrucoes
                     </div>
@@ -39,29 +42,45 @@
                         <div class="card card-body">
                             <h5>Equipamentos</h5>
                             @exercicio.Equipamentos
-                        </div>                
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-            }
-        }
-        
-        <dialog>
-            
-            <div class="text-center">
-            <p>
-                <h2>Deseja realmente apagar este exercicio?</h2>
-            </p>
+    }
+}
+
+<dialog>
+
+    <div class="text-center">
+        <p>
+            <h2>Deseja realmente apagar este exercicio?</h2>
+        </p>
         <a class="btn btn-danger" asp-action="Apagar" asp-controller="Exercicio" id="confirmarExclusaoBtn" asp-route-id="" role="button">Confirmar exclusão</a>
-            <button class="btn btn-primary fechar-btn">Cancelar</button>
-            </div>
-        </dialog>
+        <button class="btn btn-primary fechar-btn">Cancelar</button>
+    </div>
+</dialog>
 
 
-       
+
+<script>
+    const buttonApagar = document.querySelector('.apagar-btn');
+    const modal = document.querySelector('dialog');
+    const buttonClose = document.querySelector('.fechar-btn');
+    const confirmarExclusaoBtn = document.querySelector('#confirmarExclusaoBtn');
+
+    buttonApagar.onclick = function () {
+        modal.showModal();
+        const exercicioId = this.getAttribute('data-exercicio-id');
+        confirmarExclusaoBtn.setAttribute('href', `/Exercicio/Apagar/${exercicioId}`);
+    };
+
+    buttonClose.onclick = function () {
+        modal.close();
+    };
+
+</script>
 
 
-        
 

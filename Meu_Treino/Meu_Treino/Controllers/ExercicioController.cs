@@ -14,10 +14,16 @@ namespace Meu_Treino.Controllers
             _exerciciosRep = exercicioRepositorio;
         }
 
-        [PaginaAdm]
+        
         public IActionResult Index()
         {
             List<Exercicio> ListaExercicio =  _exerciciosRep.GetExercicios();
+            return View(ListaExercicio);
+        }
+        [PaginaAdm]
+        public IActionResult ExercicioAdm()
+        {
+            List<Exercicio> ListaExercicio = _exerciciosRep.GetExercicios();
             return View(ListaExercicio);
         }
 

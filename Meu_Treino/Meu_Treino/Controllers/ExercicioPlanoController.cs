@@ -2,6 +2,7 @@
 using Meu_Treino.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace Meu_Treino.Controllers
 {
@@ -15,8 +16,14 @@ namespace Meu_Treino.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var exerciciosPlano = _meuTreinoContext.ExerciciosPlanos
+                .Include(ep => ep.Exercicio)
+                .Include(ep => ep.Plano)
+                .ToList();
+
+            return View(exerciciosPlano);
         }
+
 
         public ActionResult CriarExercicioPlano(string dataPlano)
         {
