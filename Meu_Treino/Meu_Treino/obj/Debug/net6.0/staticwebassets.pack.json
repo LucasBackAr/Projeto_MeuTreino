@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Meu_Treino.bundle.scp.css"
     },
     {
+      "Id": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\BolaLBGTQI.jpg",
+      "PackagePath": "staticwebassets\\BolaLBGTQI.jpg"
+    },
+    {
+      "Id": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\MoçaCorrendo.jpg",
+      "PackagePath": "staticwebassets\\MoçaCorrendo.jpg"
+    },
+    {
       "Id": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -243,6 +251,14 @@
     {
       "Id": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\meninkabola.jpg",
+      "PackagePath": "staticwebassets\\meninkabola.jpg"
+    },
+    {
+      "Id": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\yoga.jpg",
+      "PackagePath": "staticwebassets\\yoga.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Meu_Treino.Microsoft.AspNetCore.StaticWebAssets.props",

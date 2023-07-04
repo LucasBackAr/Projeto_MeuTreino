@@ -13,11 +13,18 @@
 }
 
 <div class="d-flex flex-column justify-content-center">
-        <h1 class="text-center">Bem-vindo(a) ao Meu Treino!</h1>        
-    <div class="">
-    <form asp-controller="Login" class="form_conteiner" asp-action="Entrar" method="post">
-        <div class="mb-3 form_content">
-            <label for="login" class="form-label">Nome do usuário</label>
+       
+    <section class="relative flex items-center justify-center overflow-hidden min-h-120 flex-none" style=" background-image: url(&quot;https://images.unsplash.com/photo-1563953715689-335fe4271a1e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwzfHxTcG9ydHMlMjBJbnN0cnVjdGlvbnxlbnwwfHx8fDE2ODgzOTEyMTd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;); background-position: center center; background-size: cover;">
+        <h1 class="text-center m-2 meuTreino">Bem-vindo(a) ao Meu Treino!</h1>
+
+        <div class="max-w-3xl text-center mx-auto">
+                 <p class="body-large text-white">Crie sua rotina de Treino aqui no Meu Treino</p>
+             </div>
+</section>
+
+    <form asp-controller="Login" class="form_conteiner form-control" asp-action="Entrar" method="post">
+        <div class="mb-3 form_content ">
+            <label for="login" class="form-label">Nome do usuário:</label>
             <input type="text" 
                 asp-for="Login" 
                 class="form-control" 
@@ -26,7 +33,7 @@
             <a href="">Mensagem de Erro</a>
             @Html.ValidationMessageFor(x => x.Login)
         </div>
-     <div class="mb-3 form_content">
+        <div class="mb-3 form_content ">
         <label for="senha" class="form-label">Senha</label>
         <input type="password"
             asp-for="Senha"
@@ -38,21 +45,29 @@
         </div>
 
             <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        <button type="submit" class="btn btn-lg btn-outline-warning text-black">Entrar</button>
      </div>
      <br>
         </form>
+       
     </div>
-        <p>O Meu Treino é o lugar perfeito para você encontrar uma variedade de exercícios e atividades físicas adequados ao seu perfil e objetivos. Seja você um iniciante buscando dar os primeiros passos na prática de exercícios ou alguém que já se exercita regularmente, o Meu Treino oferece opções para todos os níveis de condicionamento físico.</p>
-
-        <p>Aqui, você terá acesso a um catálogo diversificado de exercícios, que abrangem desde treinamentos em casa até atividades ao ar livre. Nosso site é intuitivo e fácil de usar, permitindo que você encontre rapidamente os exercícios adequados para você.</p>
-
-        <p>Quer esteja interessado em fortalecimento muscular, perda de peso, ganho de condicionamento físico geral ou simplesmente em buscar uma vida mais ativa, o Meu Treino tem tudo o que você precisa para começar. Nossos planos de treino personalizados, baseados no seu perfil e objetivos, ajudarão você a construir uma rotina de atividades físicas de maneira fácil e eficaz.</p>
-
-        <p>Ao se cadastrar no Meu Treino, você terá acesso a recursos exclusivos, como a possibilidade de favoritar seus exercícios preferidos, acompanhar o seu progresso ao longo do tempo e interagir com outros usuários por meio de feedbacks e comentários. Você também poderá criar um perfil personalizado e receber recomendações personalizadas com base nos seus interesses e preferências.</p>
-
-        <p>Então, não perca mais tempo! Mova-se, dance, respire ar livre e transforme sua vida através do exercício físico. Junte-se à comunidade do Meu Treino e comece hoje mesmo a trilhar o caminho para uma vida mais saudável e ativa!</p>
+<div class="">
+    <div class="conteiner m-5 index-font ">   
+        <hr>
+        <h1 class="font-monospace">Comece a Praticar:</h1>
+        <hr>
+    <p class="font-monospace">O <span class="highlight">Meu Treino</span> é o lugar perfeito para você encontrar uma variedade de exercícios e atividades físicas adequados ao seu perfil e objetivos. Seja você um iniciante buscando dar os primeiros passos na prática de exercícios ou alguém que já se exercita regularmente, o Meu Treino oferece opções para todos os níveis de condicionamento físico.</p>
     
+    <p class ="font-monospace">Aqui, você terá acesso a um catálogo diversificado de exercícios, que abrangem desde treinamentos em casa até atividades ao ar livre. Nosso site é intuitivo e fácil de usar, permitindo que você encontre rapidamente os exercícios adequados para você.</p>
+    
+    <p class="font-monospace">Quer esteja interessado em fortalecimento muscular, perda de peso, ganho de condicionamento físico geral ou simplesmente em buscar uma vida mais ativa, o Meu Treino tem tudo o que você precisa para começar. Nossos planos de treino personalizados, baseados no seu perfil e objetivos, ajudarão você a construir uma rotina de atividades físicas de maneira fácil e eficaz.</p>
+
+    <p class="font-monospace">Ao se cadastrar no Meu Treino, você terá acesso a recursos exclusivos, como a possibilidade de favoritar seus exercícios preferidos, acompanhar o seu progresso ao longo do tempo e interagir com outros usuários por meio de feedbacks e comentários. Você também poderá criar um perfil personalizado e receber recomendações personalizadas com base nos seus interesses e preferências.</p>
+
+    <p class="font-monospace">Então, não perca mais tempo! Mova-se, dance, respire ar livre e transforme sua vida através do exercício físico. Junte-se à comunidade do Meu Treino e comece hoje mesmo a trilhar o caminho para uma vida mais saudável e ativa!</p>
+       
     </div>
+</div>
+   
 
 <script src="~/js/site.js" asp-append-version="true"></script>

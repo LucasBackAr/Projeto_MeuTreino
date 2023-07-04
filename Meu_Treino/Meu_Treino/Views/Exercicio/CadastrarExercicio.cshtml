@@ -4,14 +4,14 @@
 }
 
 <form asp-controller="Exercicio" asp-action="CadastrarExercicio" method="post">
-
+    <div class="form_content_2 form_conteiner_2">
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="nome">Nome</label>
+            <label for="nome">Nome:</label>
             <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do exercicio">
         </div>
         <div class="form-group col-md-4">
-            <label for="Grupo">Grupo Muscular</label>
+            <label for="Grupo">Grupo Muscular:</label>
             <select id="inputState" asp-for="GrupoMuscular" class="form-control">
                 <option selected>Selecione...</option>
                 <option>Peito</option>
@@ -23,7 +23,7 @@
             </select>
          </div>
         <div class="form-group col-md-4">
-            <label for="inputState">Nivel</label>
+            <label for="inputState">Nivel:</label>
             <select id="inputState" asp-for="NivelDificuldade" class="form-control">
                 <option selected>Selecione...</option>
                 <option>Iniciante</option>
@@ -33,17 +33,18 @@
         </div>
     </div>   
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Instrução</label>
+        <label for="exampleFormControlTextarea1">Instrução:</label>
         <textarea class="form-control" asp-for="Instrucoes" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Descrição</label>
+        <label for="exampleFormControlTextarea1">Descrição:</label>
         <textarea class="form-control" asp-for="Descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Equipamentos</label>
+        <label for="exampleFormControlTextarea1">Equipamentos:</label>
         <textarea class="form-control" asp-for="Equipamentos" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     
     <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
 </form>

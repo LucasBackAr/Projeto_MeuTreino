@@ -11,5 +11,9 @@ namespace Meu_Treino.Controllers
         {
             return View();
         }
+        public IActionResult Sobre()
+        {
+            return View();
+        }
     }
 }

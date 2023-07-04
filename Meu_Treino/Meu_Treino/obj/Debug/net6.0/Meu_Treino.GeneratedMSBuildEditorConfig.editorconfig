@@ -28,10 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvXENhZGFzdHJhckV4ZXJjaWNpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Exercicio/ExercicioAdm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvXEV4ZXJjaWNpb0FkbS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Exercicio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhlcmNpY2lvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Home/Sobre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2JyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/Login/Sobre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU29icmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projeto_Final/Meu_Treino/Meu_Treino/Views/PlanoTreino/Criar.cshtml]

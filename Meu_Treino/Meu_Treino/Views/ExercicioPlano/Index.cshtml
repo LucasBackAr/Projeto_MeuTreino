@@ -7,6 +7,9 @@
 @if (Model.Count() > 0)
 {
     <ul class="list-group">
+            <div class="text-end">
+                <a asp-action="CriarExercicioPlano" asp-controller="ExercicioPlano" class="btn btn-lg btn-sm btn-outline-warning"><strong class="text-black"><strong>Novo Exercicio</strong></a>
+            </div>
         @foreach (var item in Model)
         {
             <li class="list-group-item">
@@ -16,16 +19,16 @@
                     </div>
 
                     <div class="col-2">
-                            <h4>Nome do Exercicio</h4> <a class="btn btn-sm btn-outline-warning text-black" asp-action="Index" asp-controller="Exercicio">
+                            <h5>Nome do Exercicio</h5> <a class="btn btn-sm btn-outline-warning text-black" asp-action="Index" asp-controller="Exercicio">
                         @Html.DisplayFor(modelItem => item.Exercicio.Nome) </a>
                     </div>
 
                         <div class="col-2">
-                            <h4>Reperiçõs:</h4>
+                            <h5>Reperiçõs:</h5>
                             @Html.DisplayFor(modelItem => item.Repeticoes)
                         </div>
                     <div class="col-2">
-                        <h4>Series:</h4>
+                        <h5>Series:</h5>
                         @Html.DisplayFor(modelItem => item.Series)
                     </div>
 
@@ -48,9 +51,7 @@ else
 
 </div>
 
-<div class="col-2 text-end">
-    <a asp-action="CriarExercicioPlano" asp-controller="ExercicioPlano" class="btn btn-sm btn-outline-warning"><strong class="text-black">Novo Exercicio</strong></a>
-</div>
+
 
 <!--Modal p/ confirmar exclusão-->
 <dialog>
@@ -74,7 +75,7 @@ else
         buttonApagar.onclick = function () {
             modal.showModal();
             const exercicioId = this.getAttribute('data-exercicio-id');
-            confirmarExclusaoBtn.setAttribute('href', `/ExercicioPlano/Apagar/${Id}`);
+            confirmarExclusaoBtn.setAttribute('href', `/ExercicioPlano/Apagar/${exercicioId}`);
         };
     });
 

@@ -23,6 +23,10 @@ namespace Meu_Treino.Controllers
 
             return View();
         }
+        public IActionResult Sobre()
+        {
+            return View();
+        }
 
         public IActionResult Sair()
         {
@@ -100,6 +104,7 @@ namespace Meu_Treino.Controllers
                 return View(usuario);
 
             }
+
 
         }
 

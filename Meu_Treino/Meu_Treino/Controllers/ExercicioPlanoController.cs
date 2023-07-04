@@ -66,7 +66,7 @@ namespace Meu_Treino.Controllers
             _meuTreinoContext.ExerciciosPlanos.Add(exercicioPlano);
             _meuTreinoContext.SaveChanges();
 
-            return RedirectToAction("Planos", "PlanoTreino");
+            return RedirectToAction("Index");
         }
 
         public IActionResult Apagar(int id)

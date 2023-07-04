@@ -2,19 +2,19 @@
 @{
     ViewData["Tittle"] = "Crie Seu Plano";
 }
-<img src="https://pontapora.ms.gov.br/v2/pmppconsultapublica-esportelazer/" class="img-fluid" alt="Imagem responsiva">
+
 <form method="post" asp-controller="PlanoTreino" asp-action="Criar">
+    <div class="form_content_2 form_conteiner_2">
     <div class="form-group">
-        <label for="nomePlano">Nome do Plano de Treino</label>
+        <label for="nomePlano">Nome do Plano de Treino:</label>
         <input type="text" asp-for="NomePlano" class="form-control" id="nomePlano" name="NomePlano" placeholder="Plano de Treino" required>
     </div>
     <div class="form-group">
-        <label for="nomePlano">Descrição</label>
+        <label for="nomePlano">Descrição:</label>
         <input type="text" asp-for="Descricao" class="form-control" id="nomePlano" name="NomePlano" placeholder="Plano de Treino" required>
     </div>
-
-    
-
+    </div>   
+    <br>
     <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 <p class="text-center">

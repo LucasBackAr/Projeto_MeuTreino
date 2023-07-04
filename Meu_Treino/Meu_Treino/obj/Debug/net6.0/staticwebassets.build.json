@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q6tE2rtp3VgXCpCvIw1OriQ/Hb0OTOqB+ahpOsqeRLM=",
+  "Hash": "NFdvkzQ7ZnkFKwF+Ufr/NSPvYajflwV6r4AmlrJ1PAU=",
   "Source": "Meu_Treino",
   "BasePath": "_content/Meu_Treino",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Meu_Treino.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\BolaLBGTQI.jpg",
+      "SourceId": "Meu_Treino",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\",
+      "BasePath": "_content/Meu_Treino",
+      "RelativePath": "BolaLBGTQI.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BolaLBGTQI.jpg"
     },
     {
       "Identity": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\css\\site.css",
@@ -1069,6 +1086,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\meninkabola.jpg",
+      "SourceId": "Meu_Treino",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\",
+      "BasePath": "_content/Meu_Treino",
+      "RelativePath": "meninkabola.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\meninkabola.jpg"
+    },
+    {
+      "Identity": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\MoçaCorrendo.jpg",
+      "SourceId": "Meu_Treino",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\",
+      "BasePath": "_content/Meu_Treino",
+      "RelativePath": "MoçaCorrendo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MoçaCorrendo.jpg"
+    },
+    {
+      "Identity": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\yoga.jpg",
+      "SourceId": "Meu_Treino",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projeto_Final\\Meu_Treino\\Meu_Treino\\wwwroot\\",
+      "BasePath": "_content/Meu_Treino",
+      "RelativePath": "yoga.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\yoga.jpg"
     }
   ]
 }
