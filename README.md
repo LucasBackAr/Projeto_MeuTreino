@@ -13,7 +13,7 @@ Projeto para a conclusão da Academia .Net Atos
  <a href="#recursosPrincipais">Recursos Principais</a> •
  <a href="#tecnologia">Tecnologias Utilizadas</a> • 
  <a href="#contribuicao">Contribuição</a> •  
- <a href="#-autor">Autor</a>
+ <a href="#autor">Autor</a>
 </p>
 
 <h2 id="objetivo">Objetivo do Projeto</h2>
@@ -70,7 +70,7 @@ Projeto para a conclusão da Academia .Net Atos
   <li>Acesse o aplicativo em seu navegador através do endereço <code>http://localhost:porta</code>.</li>  	
 </ol>
 
-<h2> 🦸 Autor </h2>
+<h2 id="autor"> 🦸 Autor </h2>
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113467764?v=4" width="100px;" alt=""/>
 <br />
  <sub><b>Lucas Back de Araujo</b></sub></a> <a href="https://github.com/LucasBackA)](https://github.com/LucasBackAr" title="Github"></a>
