@@ -12,40 +12,57 @@
             </div>
         @foreach (var item in Model)
         {
-            <li class="list-group-item">
-                <div class="row">
-                    <div class="col-2">
-                        <span class="badge badge-info"> @Html.DisplayFor(modelItem => item.Repeticoes)</span>
-                    </div>
-
-                    <div class="col-2">
-                            <h5>Nome do Exercicio</h5> <a class="btn btn-sm btn-outline-warning text-black" asp-action="Index" asp-controller="Exercicio">
-                        @Html.DisplayFor(modelItem => item.Exercicio.Nome) </a>
-                    </div>
-
-                        <div class="col-2">
-                            <h5>Reperiçõs:</h5>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h5>Nome do Plano</h5>
+                            @Html.DisplayFor(modelItem => item.Plano.NomePlano)
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <h5>Nome do Exercicio:</h5>
+                            <a class="btn btn-sm btn-outline-warning text-black" asp-action="Index" asp-controller="Exercicio">
+                                <strong>@Html.DisplayFor(modelItem => item.Exercicio.Nome)</strong>
+                                <a class="btn btn-sm btn-outline-warning text-black" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><strong>Instrução:</strong></a>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Nível:</h5>
+                            @Html.DisplayFor(modelItem => item.Exercicio.NivelDificuldade)
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Repetiçõs:</h5>
                             @Html.DisplayFor(modelItem => item.Repeticoes)
                         </div>
-                    <div class="col-2">
-                        <h5>Series:</h5>
-                        @Html.DisplayFor(modelItem => item.Series)
-                    </div>
+                        <div class="col-md-2">
+                            <h5>Séries:</h5>
+                            @Html.DisplayFor(modelItem => item.Series)
+                        </div>
 
-                    <div class="col-4">
+                        <div class="col-md-2 text-end">
                             <button class=" apagar-btn btn btn-sm btn-outline-danger rounded-circle" data-exercicio-id="@item.Id">
-                                <i class="fa fa-times-circle">
-                                </i>
+                                <i class="fa fa-times-circle"></i>
                             </button>
-                    </div>
+                        </div>
 
-                </div>
-            </li>
+                    </div>
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card card-body">
+                                <h5 class="highlight">Instrução:</h5>
+                                @Html.DisplayFor(modelItem => item.Exercicio.Instrucoes)
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
         }
     </ul>
 }
 else
 {
+        <div class="text-end">
+            <a asp-action="CriarExercicioPlano" asp-controller="ExercicioPlano" class="btn btn-lg btn-sm btn-outline-warning"><strong class="text-black"><strong>Novo Exercicio</strong></a>
+        </div>
     <p class="alert alert-warning rounded rounded-3">Sem Exercicios Ainda</p>
 }
 
@@ -57,7 +74,7 @@ else
 <dialog>
     <div class="text-center">
         <p>
-            <h2>Deseja realmente apagar este exercicio?</h2>
+            <h3>Deseja realmente apagar este exercicio?</h3>
         </p>
         <a class="btn btn-danger" asp-action="Apagar" asp-controller="ExercicioPlano" id="confirmarExclusaoBtn" asp-route-id="" role="button">Confirmar exclusão</a>
         <button class="btn btn-primary fechar-btn">Cancelar</button>

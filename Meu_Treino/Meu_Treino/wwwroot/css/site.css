@@ -3,11 +3,22 @@ html {
   
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@media (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+
+    .form_conteiner {
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .form_content {
+        margin: 5px;
+        padding: 5px;
+    }
 }
+
 
 html {
     position: relative;
@@ -37,11 +48,13 @@ body {
 }
 .form_content {
     font-weight: bold;
-    margin: 9px;
+    margin: 50px auto;
     padding: 10px;
     position: relative;
 }
-
+p {
+    font-family: 'Poppins', sans-serif;
+}
 .text {
     position: relative;
     right: 150px;
@@ -104,16 +117,6 @@ input {
     border-radius: 10px;
     width: 100%;
     align-items: center;
-}
-.form_conteiner {
-    font-weight: bold;
-    background-color: #fafafa;
-    padding: 30px 10px 10px 10px;
-    margin: 50px 30px 30px 350px;
-    border-radius: 5px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0px 3px 30px rgb(21, 21, 21);
 }
 .form_conteiner_2 {
     font-weight: bold;

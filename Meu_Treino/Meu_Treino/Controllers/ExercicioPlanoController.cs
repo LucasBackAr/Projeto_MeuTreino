@@ -20,6 +20,7 @@ namespace Meu_Treino.Controllers
 
         public IActionResult Index()
         {
+
             var exerciciosPlano = _meuTreinoContext.ExerciciosPlanos
                 .Include(ep => ep.Exercicio)
                 .Include(ep => ep.Plano)

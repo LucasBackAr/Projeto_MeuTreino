@@ -22,49 +22,44 @@
              </div>
 </section>
 
-    <form asp-controller="Login" class="form_conteiner form-control" asp-action="Entrar" method="post">
-        <div class="mb-3 form_content ">
-            <label for="login" class="form-label">Nome do usuário:</label>
-            <input type="text" 
-                asp-for="Login" 
-                class="form-control" 
-                id="login"
-                placeholder="Digite o nome do usuário">
-            <a href="">Mensagem de Erro</a>
-            @Html.ValidationMessageFor(x => x.Login)
+    <form asp-controller="Login" asp-action="Entrar" class="form-control" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="mb-3 form_content">
+                        <label for="login" class="form-label">Nome do usuário:</label>
+                        <input type="text" asp-for="Login" class="form-control" id="login" placeholder="Digite o nome do usuário">
+                        @Html.ValidationMessageFor(x => x.Login)
+                    </div>
+                    <div class="mb-3 form_content">
+                        <label for="senha" class="form-label">Senha:</label>
+                        <input type="password" asp-for="Senha" class="form-control" id="senha" placeholder="Digite a senha do usuário">
+                        @Html.ValidationMessageFor(x => x.Senha)
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-outline-warning text-black">Entrar</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
         </div>
-        <div class="mb-3 form_content ">
-        <label for="senha" class="form-label">Senha</label>
-        <input type="password"
-            asp-for="Senha"
-            class="form-control"
-            id="senha"
-            placeholder="Digite a senha do usuário" >
-        <a href="">Mensagem de Erro</a>
-        @Html.ValidationMessageFor(x => x.Senha)
-        </div>
-
-            <div class="text-center">
-        <button type="submit" class="btn btn-lg btn-outline-warning text-black">Entrar</button>
-     </div>
-     <br>
-        </form>
+    </form>
        
     </div>
 <div class="">
     <div class="conteiner m-5 index-font ">   
         <hr>
-        <h1 class="font-monospace">Comece a Praticar:</h1>
+        <h1 class="highlight">Comece a Praticar:</h1>
         <hr>
-    <p class="font-monospace">O <span class="highlight">Meu Treino</span> é o lugar perfeito para você encontrar uma variedade de exercícios e atividades físicas adequados ao seu perfil e objetivos. Seja você um iniciante buscando dar os primeiros passos na prática de exercícios ou alguém que já se exercita regularmente, o Meu Treino oferece opções para todos os níveis de condicionamento físico.</p>
+        <p class="font-index">O <span class="highlight">Meu Treino</span> é o lugar perfeito para você encontrar uma variedade de exercícios e atividades físicas adequados ao seu perfil e objetivos. Seja você um iniciante buscando dar os primeiros passos na prática de exercícios ou alguém que já se exercita regularmente, o Meu Treino oferece opções para todos os níveis de condicionamento físico.</p>
     
-    <p class ="font-monospace">Aqui, você terá acesso a um catálogo diversificado de exercícios, que abrangem desde treinamentos em casa até atividades ao ar livre. Nosso site é intuitivo e fácil de usar, permitindo que você encontre rapidamente os exercícios adequados para você.</p>
-    
-    <p class="font-monospace">Quer esteja interessado em fortalecimento muscular, perda de peso, ganho de condicionamento físico geral ou simplesmente em buscar uma vida mais ativa, o Meu Treino tem tudo o que você precisa para começar. Nossos planos de treino personalizados, baseados no seu perfil e objetivos, ajudarão você a construir uma rotina de atividades físicas de maneira fácil e eficaz.</p>
+        <p class ="font-index">Aqui, você terá acesso a um catálogo diversificado de exercícios, que abrangem desde treinamentos em casa até atividades ao ar livre. Nosso site é intuitivo e fácil de usar, permitindo que você encontre rapidamente os exercícios adequados para você.</p>
 
-    <p class="font-monospace">Ao se cadastrar no Meu Treino, você terá acesso a recursos exclusivos, como a possibilidade de favoritar seus exercícios preferidos, acompanhar o seu progresso ao longo do tempo e interagir com outros usuários por meio de feedbacks e comentários. Você também poderá criar um perfil personalizado e receber recomendações personalizadas com base nos seus interesses e preferências.</p>
+        <p class="font-index">Quer esteja interessado em fortalecimento muscular, perda de peso, ganho de condicionamento físico geral ou simplesmente em buscar uma vida mais ativa, o Meu Treino tem tudo o que você precisa para começar. Nossos planos de treino personalizados, baseados no seu perfil e objetivos, ajudarão você a construir uma rotina de atividades físicas de maneira fácil e eficaz.</p>
 
-    <p class="font-monospace">Então, não perca mais tempo! Mova-se, dance, respire ar livre e transforme sua vida através do exercício físico. Junte-se à comunidade do Meu Treino e comece hoje mesmo a trilhar o caminho para uma vida mais saudável e ativa!</p>
+        <p class="font-index">Ao se cadastrar no Meu Treino, você terá acesso a recursos exclusivos, como a possibilidade de favoritar seus exercícios preferidos, acompanhar o seu progresso ao longo do tempo e interagir com outros usuários por meio de feedbacks e comentários. Você também poderá criar um perfil personalizado e receber recomendações personalizadas com base nos seus interesses e preferências.</p>
+
+        <p class="font-index">Então, não perca mais tempo! Mova-se, dance, respire ar livre e transforme sua vida através do exercício físico. Junte-se à comunidade do Meu Treino e comece hoje mesmo a trilhar o caminho para uma vida mais saudável e ativa!</p>
        
     </div>
 </div>
