@@ -1,10 +1,11 @@
-<h1 align="center">Meu Treino</h1>
-Projeto para a conclusão da Academia .Net Atos
+<h1 align="center" style="color:#ffa500">Meu Treino</h1>
 
-## 💻 Sobre o projeto
+<h3 align="center">Projeto para a conclusão da Academia .Net Atos</h3>
+<hr>
+<p><h2 align="center"> 💻 Sobre o projeto</h2></p>
 <p align="center">O projeto "Meu Treino" é uma plataforma web dedicada a pessoas que desejam iniciar uma rotina de atividade física, oferecendo uma variedade 
   de recursos e funcionalidades para ajudar os usuários a alcançarem seus objetivos de forma prática e acessível.</p>
-
+<hr>
 
 <br/>
 
@@ -15,7 +16,7 @@ Projeto para a conclusão da Academia .Net Atos
  <a href="#contribuicao">Contribuição</a> •  
  <a href="#autor">Autor</a>
 </p>
-
+<hr>
 <h2 id="objetivo">Objetivo do Projeto</h2>
 <ul>
   <li><strong> Objetivo geral:</strong> O objetivo do projeto, é possibilitar ao usuário a experiência de cadastros e controle de uma rotina de exercicíos, com ajuda da criação de planos de treino, criados a partir dos exercicíos já cadastrados na plataforma.</li>
@@ -24,14 +25,14 @@ Projeto para a conclusão da Academia .Net Atos
   <li><strong>Requisitos não funcionais:</strong> Nuvem, servidor externo</li>	  
     
 </ul>
-
+<hr>
 <h2 id="recursosPrincipais">Recursos Principais</h2>
 <ul>
   <li><strong>Exercícios Personalizados:</strong> Com base no perfil individual de cada usuário, o site disponibiliza ao usuário a criação de um plano de exercicios, levando em consideração preferências, nível de condicionamento físico e metas específicas.</li>
   <li><strong>Categorias de Exercícios:</strong> Os exercícios estão organizados em categorias com base em grupos musculares, níveis de dificuldade e objetivos, permitindo que os usuários encontrem facilmente os treinos mais adequados para suas necessidades.</li>
   <li><strong>Planos de Treino:</strong> Os usuários têm a opção de criar e acompanhar seus próprios planos de treino, definindo metas e registrando seu progresso ao longo do tempo.</li>  
 </ul>
-
+<hr>
 <h2 id="tecnologia">Tecnologias Utilizadas</h2>
 
 <ul>
@@ -40,7 +41,7 @@ Projeto para a conclusão da Academia .Net Atos
   <li><strong>Front-end:</strong> O front-end é construído com HTML, CSS e JavaScript, com o uso de bibliotecas e frameworks como Bootstrap para garantir uma interface responsiva e visualmente agradável.</li>
 </ul>
 <br/>
-
+<hr>
 <h2 id="contribuicao">Contribuição</h2>
 
 <p>Se você deseja contribuir para o desenvolvimento do projeto "Meu Treino", siga as etapas abaixo:</p>
@@ -56,7 +57,7 @@ Projeto para a conclusão da Academia .Net Atos
   <li>Após a aprovação, suas alterações serão mescladas ao projeto principal.</li>
 </ol>
 
-
+<hr>
 <h2 id="como_executar-projeto">Como Executar o Projeto</h2>
 
 <p>Para executar o projeto "Meu Treino" em sua máquina local, siga as instruções abaixo:</p>
@@ -69,7 +70,7 @@ Projeto para a conclusão da Academia .Net Atos
   <li>Execute o projeto.</li>
   <li>Acesse o aplicativo em seu navegador através do endereço <code>http://localhost:porta</code>.</li>  	
 </ol>
-
+<hr>
 <h2 id="autor"> 🦸 Autor </h2>
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113467764?v=4" width="100px;" alt=""/>
 <br />
