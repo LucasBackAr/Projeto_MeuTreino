@@ -5,9 +5,6 @@ Projeto para a conclusão da Academia .Net Atos
 <p align="center">O projeto "Meu Treino" é uma plataforma web dedicada a pessoas que desejam iniciar uma rotina de atividade física, oferecendo uma variedade 
   de recursos e funcionalidades para ajudar os usuários a alcançarem seus objetivos de forma prática e acessível.</p>
 
-<h1 align="center"> 
-	🚧  Em contrução 🚧
-</h1>
 
 <br/>
 
