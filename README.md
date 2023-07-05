@@ -72,7 +72,7 @@
 </ol>
 <hr>
 <h2> Video de Apresentação:</h2>
-[![Meu Treino](https://img.youtube.com/vi/woNS40upRSY/0.jpg)](https://www.youtube.com/watch?v=woNS40upRSY)
+https://youtu.be/woNS40upRSY
 
 
 
